@@ -26,4 +26,4 @@ Export-Package: de.jaret.examples.ui,
  de.jaret.util.ui.infoprovider,
  de.jaret.util.ui.model,
  org.eclipse.swt.custom
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

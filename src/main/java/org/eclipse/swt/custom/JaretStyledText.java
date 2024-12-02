@@ -30,6 +30,7 @@ public class JaretStyledText extends StyledText {
         checkWidget();
         int length = getCharCount();
 
+        int caretOffset = getCaretOffset();
         if (length > 0 && offset != caretOffset) {
             if (offset < 0) {
                 caretOffset = 0;
@@ -42,6 +43,7 @@ public class JaretStyledText extends StyledText {
                 caretOffset = offset;
             }
         }
-        setCaretLocation();
+        setCaretOffset(caretOffset);
+//        setCaretLocation();
     }
 }

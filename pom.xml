@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>de.jaret</groupId>
+	<groupId>org.intranet.mouse</groupId>
 	<artifactId>jaretutil</artifactId>
 	<packaging>jar</packaging>
-	<version>0.32</version>
+	<version>0.33</version>
 	<name>Jaret utilities</name>
 	<url>http://www.jaret.de</url>
 	<dependencies>
@@ -15,30 +15,32 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>swt</groupId>
-			<artifactId>org.eclipse.jface_3.2.0</artifactId>
-			<version>R</version>
-			<scope>compile</scope>
+			<groupId>org.eclipse.platform</groupId>
+			<artifactId>org.eclipse.swt</artifactId>
+			<version>3.7.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/org.eclipse.swt_3.7.2.v3740f.jar</systemPath>
 		</dependency>
 		<dependency>
-			<groupId>swt</groupId>
-			<artifactId>
-				org.eclipse.swt.win32.win32.x86_3.2.0
-			</artifactId>
-			<version>R</version>
-			<scope>compile</scope>
+			<groupId>org.eclipse.platform</groupId>
+			<artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
+			<version>3.7.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/org.eclipse.swt.win32.win32.x86_64_3.7.2.v3740f.jar</systemPath>
 		</dependency>
 		<dependency>
-			<groupId>swt</groupId>
-			<artifactId>org.eclipse.swt_3.2.0</artifactId>
-			<version>R</version>
-			<scope>compile</scope>
+			<groupId>org.eclipse.platform</groupId>
+			<artifactId>org.eclipse.jface</artifactId>
+			<version>3.7.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/org.eclipse.jface_3.7.0.v20110928-1505.jar</systemPath>
 		</dependency>
 		<dependency>
-			<groupId>swt</groupId>
-			<artifactId>org.eclipse.core.commands_3.2.0</artifactId>
-			<version>R</version>
-			<scope>compile</scope>
+			<groupId>org.eclipse.platform</groupId>
+			<artifactId>org.eclipse.core.commands</artifactId>
+			<version>3.6.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/org.eclipse.core.commands_3.6.0.I20110111-0800.jar</systemPath>
 		</dependency>
 
 	</dependencies>
@@ -55,10 +57,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<!-- <version>3.0</version> -->
+				<version>3.0</version>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
