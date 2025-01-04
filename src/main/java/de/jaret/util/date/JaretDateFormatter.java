@@ -16,6 +16,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 import de.jaret.util.misc.FormatHelper;
 
@@ -107,6 +108,11 @@ public class JaretDateFormatter {
      */
     public String generateDisplayString(JaretDate date) {
         return _df.format(date.getDate());
+    }
+
+    public void setTimeZone(TimeZone value) {
+        _df.setTimeZone(value);
+        _df2.setTimeZone(value);
     }
 
     /**

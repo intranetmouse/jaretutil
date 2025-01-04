@@ -349,6 +349,10 @@ public class JaretDate extends PropertyObservableBase implements Comparable<Jare
         }
     }
 
+    public void setTimeZone(TimeZone value) {
+        getCalendar().setTimeZone(value);
+    }
+
     /**
      * Supply a configured (set to the current time) Calendar for internal use.
      * 
