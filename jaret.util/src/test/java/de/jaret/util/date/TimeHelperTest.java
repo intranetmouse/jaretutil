@@ -12,11 +12,14 @@ package de.jaret.util.date;
 
 import java.text.ParseException;
 
+import org.junit.Test;
+
 import junit.framework.TestCase;
 
 public class TimeHelperTest extends TestCase {
 
-	public static void testConversion() {
+	@Test
+	public void testConversion() {
 		int sec = 0;
 		try {
 			sec = TimeHelper.timeStringToSeconds("8:00");

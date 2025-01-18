@@ -105,14 +105,14 @@ public class HolidayEnumerator_de_DE extends HolidayEnumeratorBase {
         addNamedDate(year, ed.month, ed.day, 49, true, "Pfingstsonntag");
         addNamedDate(year, ed.month, ed.day, 50, true, "Pfingstmontag");
 
-        // hl drei kˆnige
+        // hl drei k√∂nige
         // bayern, sachsen-anhalt und bw
         if (_regionId != null
                 && (_regionId.equals(DE_DE_REGION_BAV) || _regionId.equals(DE_DE_REGION_SAAN) || _regionId
                         .equals(DE_DE_REGION_BAWUE))) {
-            addNamedDate(year, 0, 6, true, "Heilige drei Kˆnige");
+            addNamedDate(year, 0, 6, true, "Heilige drei K√∂nige");
         } else {
-            addNamedDate(year, 0, 6, false, "Heilige drei Kˆnige");
+            addNamedDate(year, 0, 6, false, "Heilige drei K√∂nige");
         }
 
         // fronleichnam
@@ -126,16 +126,16 @@ public class HolidayEnumerator_de_DE extends HolidayEnumeratorBase {
             addNamedDate(year, ed.month, ed.day, 60, false, "Fronleichnam");
         }
 
-        // Mari‰ Himmelfahrt
+        // Mari√§ Himmelfahrt
         // nur saarland
         if (_regionId != null && (_regionId.equals(DE_DE_REGION_SAAR))) {
-            addNamedDate(year, 7, 15, true, "Mari‰ Himmelfahrt");
+            addNamedDate(year, 7, 15, true, "Mari√§ Himmelfahrt");
         } else {
-            addNamedDate(year, 7, 15, false, "Mari‰ Himmelfahrt");
+            addNamedDate(year, 7, 15, false, "Mari√§ Himmelfahrt");
         }
 
         // reformationstag
-        // brandnburg, meck vorpomm, sachen, s-anhalt, th¸ringen
+        // brandnburg, meck vorpomm, sachen, s-anhalt, th√ºringen
         if (_regionId != null
                 && (_regionId.equals(DE_DE_REGION_BRA) || _regionId.equals(DE_DE_REGION_MVP)
                         || _regionId.equals(DE_DE_REGION_SACH) || _regionId.equals(DE_DE_REGION_SAAN) || _regionId
@@ -161,9 +161,9 @@ public class HolidayEnumerator_de_DE extends HolidayEnumeratorBase {
         // nur sachsen
         EasyDate bbt = calcBussBettag(year);
         if (_regionId != null && (_regionId.equals(DE_DE_REGION_SACH))) {
-            addNamedDate(year, bbt.month, bbt.day, true, "Buﬂ- und Bettag");
+            addNamedDate(year, bbt.month, bbt.day, true, "Bu√ü- und Bettag");
         } else {
-            addNamedDate(year, bbt.month, bbt.day, false, "Buﬂ- und Bettag");
+            addNamedDate(year, bbt.month, bbt.day, false, "Bu√ü- und Bettag");
         }
 
         // special days only

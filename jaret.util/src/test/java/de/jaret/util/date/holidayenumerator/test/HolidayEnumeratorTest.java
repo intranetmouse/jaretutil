@@ -16,6 +16,8 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
 
+import org.junit.Test;
+
 import junit.framework.TestCase;
 import de.jaret.util.date.holidayenumerator.HolidayEnumerator;
 import de.jaret.util.date.holidayenumerator.HolidayEnumeratorBase;
@@ -44,6 +46,7 @@ public class HolidayEnumeratorTest extends TestCase {
 	/**
 	 * Basic function test
 	 */
+	@Test
 	public void testDays() {
 		HolidayEnumerator en = HolidayEnumeratorFactory.getHolidayEnumeratorInstance(Locale.GERMANY, null);
 		Date date = getDate(2005, 1, 1);
@@ -53,6 +56,7 @@ public class HolidayEnumeratorTest extends TestCase {
 	 * Test the methods for calculating dates
 	 *
 	 */
+	@Test
 	public void testCalcFunctions() {
 		// does not matter what locale is used
 		HolidayEnumeratorBase en = (HolidayEnumeratorBase) HolidayEnumeratorFactory.getHolidayEnumeratorInstance(Locale.GERMANY, null);
@@ -86,6 +90,7 @@ public class HolidayEnumeratorTest extends TestCase {
 
 	}
 	
+	@Test
 	public void testEnumeration() {
 		List<Locale> locales = HolidayEnumeratorFactory.getAvailableHolidayEnumeratorLocales();
 		if (locales.size()<4) {

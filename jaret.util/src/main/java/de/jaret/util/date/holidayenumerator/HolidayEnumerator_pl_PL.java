@@ -14,7 +14,7 @@ import java.util.Locale;
 
 /**
  * HolidayEnumerator for Poland. Includes public holidays according to <a
- * href="http://en.wikipedia.org/wiki/Holidays_in_Poland">http://en.wikipedia.org/wiki/Holidays_in_Poland</a>. <b>The
+ * href="https://en.wikipedia.org/wiki/Public_holidays_in_Poland">https://en.wikipedia.org/wiki/Public_holidays_in_Poland</a>. <b>The
  * calculations are without any warranty!</b>
  * 
  * @author Peter Kliem
@@ -42,25 +42,25 @@ public class HolidayEnumerator_pl_PL extends HolidayEnumeratorBase {
     protected void fillMap(int year) {
         // general holidays
         addNamedDate(year, 0, 1, true, "Nowy Rok");
-        addNamedDate(year, 4, 1, true, "?wi?to Pa?stwowe");
-        addNamedDate(year, 4, 3, true, "?wi?to Narodowe Trzeciego Maja");
+        addNamedDate(year, 4, 1, true, "Święto Państwowe");
+        addNamedDate(year, 4, 3, true, "Święto Narodowe Trzeciego Maja");
 
-        addNamedDate(year, 7, 15, true, "Wniebowzi?cie Naj?wi?tszej Maryi Panny");
-        addNamedDate(year, 10, 1, true, "Wszystkich ?wi?tych");
-        addNamedDate(year, 10, 11, true, "Narodowe ?wi?to Niepodleg?o?ci");
+        addNamedDate(year, 7, 15, true, "Wniebowzięcie Najświętszej Maryi Panny");
+        addNamedDate(year, 10, 1, true, "Wszystkich Świętych");
+        addNamedDate(year, 10, 11, true, "Narodowe Święto Niepodległości ");
         // addNamedDate(year, 11, 24, false, "Heiligabend");
-        addNamedDate(year, 11, 25, true, "pierwszy dzie? Bo?ego Narodzenia");
-        addNamedDate(year, 11, 26, true, "drugi dzie? Bo?ego Narodzenia");
+        addNamedDate(year, 11, 25, true, "pierwszy dzień Bożego Narodzenia");
+        addNamedDate(year, 11, 26, true, "drugi dzień Bożego Narodzenia");
         // addNamedDate(year, 11, 31, false, "Sylvester");
 
         // easter days
         EasyDate ed = calcEaster(year);
-        addNamedDate(year, ed.month, ed.day, true, "pierwszy dzie? Wielkiej Nocy");
-        addNamedDate(year, ed.month, ed.day, 1, true, "drugi dzie? Wielkiej Nocy");
-        addNamedDate(year, ed.month, ed.day, 7, true, "pierwszy dzie? Zielonych ?wi?tek");
+        addNamedDate(year, ed.month, ed.day, true, "pierwszy dzień Wielkiej Nocy");
+        addNamedDate(year, ed.month, ed.day, 1, true, "drugi dzień Wielkiej Nocy");
+        addNamedDate(year, ed.month, ed.day, 7, true, "pierwszy dzień Zielonych Świętek");
 
         // 9th Thursday after Easter
-        addNamedDate(year, ed.month, ed.day, 4 + 9 * 7, true, "dzie? Bo?ego Cia?a");
+        addNamedDate(year, ed.month, ed.day, 4 + 9 * 7, true, "dzień Bożego Ciała");
 
     }
 

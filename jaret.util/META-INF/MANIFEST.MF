@@ -6,12 +6,7 @@ Bundle-Version: 0.27
 Bundle-ClassPath: .
 Bundle-Vendor: jaret.de
 Bundle-Localization: plugin
-Require-Bundle: org.eclipse.jface,
- org.eclipse.jface.text,
- org.eclipse.swt,
- org.junit
-Export-Package: de.jaret.examples.ui,
- de.jaret.util.collections,
+Export-Package: de.jaret.util.collections,
  de.jaret.util.date,
  de.jaret.util.date.holidayenumerator,
  de.jaret.util.date.holidayenumerator.test,
@@ -19,11 +14,5 @@ Export-Package: de.jaret.examples.ui,
  de.jaret.util.date.timemachine,
  de.jaret.util.infoprovider,
  de.jaret.util.misc,
- de.jaret.util.swing,
- de.jaret.util.swt,
- de.jaret.util.ui,
- de.jaret.util.ui.console,
- de.jaret.util.ui.infoprovider,
- de.jaret.util.ui.model,
- org.eclipse.swt.custom
+ de.jaret.util.swing
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
