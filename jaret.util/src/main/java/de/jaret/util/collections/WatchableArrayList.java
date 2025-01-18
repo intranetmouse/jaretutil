@@ -20,15 +20,15 @@ import java.util.ListIterator;
  * @author Peter Kliem
  * @version $id$
  */
-public class WatchableArrayList implements List {
+public class WatchableArrayList<E> implements List<E> {
     private List<ListWatcher> _listeners;
-    private List _content;
+    private List<E> _content;
 
     /**
      * 
      */
     public WatchableArrayList() {
-        _content = new ArrayList();
+        _content = new ArrayList<>();
     }
 
     public void addListWatcher(ListWatcher watcher) {
@@ -92,7 +92,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#iterator()
      */
-    public Iterator iterator() {
+    public Iterator<E> iterator() {
         return _content.iterator();
     }
 
@@ -110,7 +110,8 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#toArray(java.lang.Object[])
      */
-    public Object[] toArray(Object[] a) {
+    @Override
+    public <T> T[] toArray(T[] a) {
         return _content.toArray(a);
     }
 
@@ -119,7 +120,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#add(java.lang.Object)
      */
-    public boolean add(Object o) {
+    public boolean add(E o) {
         boolean result = _content.add(o);
         fireElementAdded(o);
         return result;
@@ -144,7 +145,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#containsAll(java.util.Collection)
      */
-    public boolean containsAll(Collection c) {
+    public boolean containsAll(Collection<?> c) {
         return _content.containsAll(c);
     }
 
@@ -153,7 +154,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#addAll(java.util.Collection)
      */
-    public boolean addAll(Collection c) {
+    public boolean addAll(Collection<? extends E> c) {
         // TODO listener
         return _content.addAll(c);
     }
@@ -163,7 +164,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#addAll(int, java.util.Collection)
      */
-    public boolean addAll(int index, Collection c) {
+    public boolean addAll(int index, Collection<? extends E> c) {
         // TODO listener
         return _content.addAll(index, c);
     }
@@ -173,7 +174,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#removeAll(java.util.Collection)
      */
-    public boolean removeAll(Collection c) {
+    public boolean removeAll(Collection<?> c) {
         // TODO listener
         return _content.removeAll(c);
     }
@@ -183,7 +184,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#retainAll(java.util.Collection)
      */
-    public boolean retainAll(Collection c) {
+    public boolean retainAll(Collection<?> c) {
         // TODO listener
         return _content.retainAll(c);
     }
@@ -204,7 +205,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#get(int)
      */
-    public Object get(int index) {
+    public E get(int index) {
         return _content.get(index);
     }
 
@@ -213,7 +214,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#set(int, java.lang.Object)
      */
-    public Object set(int index, Object element) {
+    public E set(int index, E element) {
         // TODO listener
         return _content.set(index, element);
     }
@@ -223,7 +224,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#add(int, java.lang.Object)
      */
-    public void add(int index, Object element) {
+    public void add(int index, E element) {
         _content.add(index, element);
         fireElementAdded(element);
     }
@@ -233,8 +234,8 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#remove(int)
      */
-    public Object remove(int index) {
-        Object o = _content.remove(index);
+    public E remove(int index) {
+        E o = _content.remove(index);
         fireElementRemoved(o);
         return o;
     }
@@ -262,7 +263,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#listIterator()
      */
-    public ListIterator listIterator() {
+    public ListIterator<E> listIterator() {
         return _content.listIterator();
     }
 
@@ -271,7 +272,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#listIterator(int)
      */
-    public ListIterator listIterator(int index) {
+    public ListIterator<E> listIterator(int index) {
         return _content.listIterator(index);
     }
 
@@ -280,7 +281,7 @@ public class WatchableArrayList implements List {
      * 
      * @see java.util.List#subList(int, int)
      */
-    public List subList(int fromIndex, int toIndex) {
+    public List<E> subList(int fromIndex, int toIndex) {
         return _content.subList(fromIndex, toIndex);
     }
 

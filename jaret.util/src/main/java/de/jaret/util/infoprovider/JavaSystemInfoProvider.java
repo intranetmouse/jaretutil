@@ -49,7 +49,7 @@ public class JavaSystemInfoProvider implements JaretInfoProvider {
     public List<SysInfoEntry> getSysInfoEntries() {
         List<SysInfoEntry> entries = new ArrayList<SysInfoEntry>();
         Properties props = System.getProperties();
-        Iterator it = props.keySet().iterator();
+        Iterator<Object> it = props.keySet().iterator();
         while (it.hasNext()) {
             String key = (String) it.next();
             String val = props.getProperty(key);

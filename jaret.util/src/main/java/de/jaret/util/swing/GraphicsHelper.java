@@ -18,11 +18,8 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 
-import org.eclipse.swt.graphics.GC;
-import org.eclipse.swt.graphics.Point;
-
 /**
- * A simple class containing several static methods for convenient painting with a grpahics object.
+ * A simple class containing several static methods for convenient painting with a graphics object.
  * 
  * @author Peter Kliem
  * @version $Id: GraphicsHelper.java 881 2009-09-22 21:25:47Z kliem $
@@ -67,7 +64,7 @@ public class GraphicsHelper {
      * @param graphics graphics to use
      * @param string string to render
      * @param x center x
-     * @param y basey
+     * @param y base y
      */
     public static void drawStringCentered(Graphics graphics, String string, int x, int y) {
         Rectangle2D rect = graphics.getFontMetrics().getStringBounds(string, graphics);
