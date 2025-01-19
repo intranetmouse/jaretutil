@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.intranet.mouse</groupId>
+		<artifactId>jaretutil.parent</artifactId>
+		<version>0.33</version>
+	</parent>
+
+	<artifactId>jaret.swt.util</artifactId>
+	<packaging>jar</packaging>
+	<name>Jaret SWT utilities</name>
+	<url>http://www.jaret.de</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.intranet.mouse</groupId>
+			<artifactId>jaretutil</artifactId>
+			<version>0.33</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/../jaret.util/target/jaretutil-0.33.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.platform</groupId>
+			<artifactId>org.eclipse.swt</artifactId>
+			<version>3.7.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/org.eclipse.swt_3.7.2.v3740f.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.platform</groupId>
+			<artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
+			<version>3.7.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/org.eclipse.swt.win32.win32.x86_64_3.7.2.v3740f.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.platform</groupId>
+			<artifactId>org.eclipse.jface</artifactId>
+			<version>3.7.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/org.eclipse.jface_3.7.0.v20110928-1505.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.platform</groupId>
+			<artifactId>org.eclipse.core.commands</artifactId>
+			<version>3.6.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/org.eclipse.core.commands_3.6.0.I20110111-0800.jar</systemPath>
+		</dependency>
+	</dependencies>
+
+	<licenses>
+		<license>
+			<name>CPL (Common Public License)</name>
+			<url>LICENSE.txt</url>
+		</license>
+	</licenses>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
