@@ -93,6 +93,9 @@ public class JaretDate extends PropertyObservableBase implements Comparable<Jare
      */
     public JaretDate(JaretDate jdate) {
         _date = new Date(jdate.getDate().getTime());
+        if (jdate._calendar != null) {
+            _calendar = (Calendar)jdate._calendar.clone();
+        }
     }
 
     /**
