@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.intranet.mouse</groupId>
+		<groupId>io.github.intranetmouse</groupId>
 		<artifactId>jaret.util.parent</artifactId>
 		<version>0.33</version>
 	</parent>
@@ -45,25 +45,21 @@
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
-					<outputDirectory>
-						src/site/resources/data
-					</outputDirectory>
+					<outputDirectory>src/site/resources/data</outputDirectory>
 					<descriptors>
-						<descriptor>
-							src/main/assembly/binassembly.xml
-						</descriptor>
-						<descriptor>
-							src/main/assembly/srcassembly.xml
-						</descriptor>
+						<descriptor>src/main/assembly/binassembly.xml</descriptor>
+						<descriptor>src/main/assembly/srcassembly.xml</descriptor>
 					</descriptors>
 				</configuration>
 			</plugin>
 
+<!--
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
 				<version>3.2</version>
 			</plugin>
+-->
 		</plugins>
 	</build>
 
@@ -82,8 +78,11 @@
 				<reportSets>
 					<reportSet>
 						<reports>
+<!--
 							<report>licenses</report>
-							<!-- <report>dependencies</report> <report>scm</report> -->
+							<report>dependencies</report>
+							<report>scm</report>
+-->
 						</reports>
 					</reportSet>
 				</reportSets>
@@ -98,22 +97,26 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.11.2</version>
 			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.6.0</version>
+<!--
 				<configuration>
 					<configLocation>
 						../de.jaret.infrastructure/jaret_checks_lib.xml
 					</configLocation>
 				</configuration>
-
+-->
 			</plugin>
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>3.0.5</version>
 			</plugin>
 		</plugins>
 	</reporting>

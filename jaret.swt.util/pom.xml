@@ -3,8 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.intranet.mouse</groupId>
-		<artifactId>jaretutil.parent</artifactId>
+		<groupId>io.github.intranetmouse</groupId>
+		<artifactId>jaret.util.parent</artifactId>
 		<version>0.33</version>
 	</parent>
 
@@ -20,11 +20,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.intranet.mouse</groupId>
-			<artifactId>jaretutil</artifactId>
+			<groupId>io.github.intranetmouse</groupId>
+			<artifactId>jaret.util</artifactId>
 			<version>0.33</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/../jaret.util/target/jaretutil-0.33.jar</systemPath>
 		</dependency>
 
 		<dependency>
