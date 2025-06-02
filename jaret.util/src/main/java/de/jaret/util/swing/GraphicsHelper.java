@@ -109,7 +109,7 @@ public class GraphicsHelper {
      * Draw a string vertically centered between upper and lower y left aligned to x.
      * 
      * @param graphics Graphics to paint with
-     * @param label label to draw
+     * @param string text to draw
      * @param x left x
      * @param upperY upper y bound
      * @param lowerY lower y bound

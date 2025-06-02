@@ -143,7 +143,7 @@ public class JaretDateFormatter {
     /**
      * Retrieve a localized name for the day of the week.
      * 
-     * @param dayOfWeek
+     * @param dayOfWeek 0=Sunday, 6=Saturday
      * @return the localized name of the weekday
      */
     public String getDayOfWeekString(int dayOfWeek) {

@@ -86,6 +86,8 @@ public interface DateIterator {
      * If the correct DST flag is set to true, the iterator will add/remove an hour if the
      * DST switch time has been passed. This is false by default and you should only use it if you are knowing
      * what you are doing. This uses the Default TimeZone for determining DST switches.
+     * @param correctDST whether to add/remove an hour when getting next date
+     * @see DateIterator#getNextDate()
      */
     void setCorrectDST(boolean correctDST);
 
