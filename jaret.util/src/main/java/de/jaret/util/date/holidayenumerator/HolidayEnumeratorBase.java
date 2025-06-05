@@ -316,7 +316,7 @@ public abstract class HolidayEnumeratorBase implements HolidayEnumerator {
         } else if (2200 <= jahr && jahr <= 2299) {
             M = 25;
             N = 0;
-        } else if (2300 <= jahr && jahr <= 2499) {
+        } else if (2300 <= jahr && jahr <= 2399) {
             M = 26;
             N = 1;
         } else if (2400 <= jahr && jahr <= 2499) {
@@ -324,7 +324,7 @@ public abstract class HolidayEnumeratorBase implements HolidayEnumerator {
             N = 1;
         }
         int a = jahr % 19;
-        int b = jahr % 4; // Korrektur Schaltjahr
+        int b = jahr % 4; // Korrektur Schaltjahr - leap year correction
         int c = jahr % 7;
         int d = (19 * a + M) % 30;
         int e = (2 * b + 4 * c + 6 * d + N) % 7;

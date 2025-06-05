@@ -1,5 +1,5 @@
 /*
- *  File: MapWatcher.java 
+ *  File: MapWatcher.java
  *  Copyright (c) 2004-2007  Peter Kliem (Peter.Kliem@jaret.de)
  *  A commercial license is available, see http://www.jaret.de.
  *

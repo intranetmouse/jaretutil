@@ -15,12 +15,12 @@
    </links>
 
     <menu name="jaretutil">
-      <item name="overview" href="index.html"/>      
-      <item name="screenshots" href="util_screenshots.html"/>      
-      <item name="changelog" href="changelog.html"/>      
+      <item name="overview" href="index.html"/>
+      <item name="screenshots" href="util_screenshots.html"/>
+      <item name="changelog" href="changelog.html"/>
     </menu>
 <menu name="impressumB">
-   <item name="impressum" href="../impressum.html"/>      
+   <item name="impressum" href="../impressum.html"/>
  </menu>
 
 <menu ref="reports"/>

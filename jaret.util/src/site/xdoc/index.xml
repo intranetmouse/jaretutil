@@ -8,10 +8,12 @@
 	</head>
 	<body>
 		<section name="de.jaret.util">
+			<p>This is a "friendly" fork of the original jaret.util that is intended to hold bugfixes until the time that the original project continues development.
+			</p>
 			<p>
 		The jaret utils are a collection of helper classes for the jaret project. These are needed by all other jaret components. The utils are 
 		<b>subject to frequent changes</b> since they collect everything factored out of the other jaret parts. 
-		There are simple widgets within the util package. See screenshots <a href="../util_screenshots.html">here</a>.
+		There are simple widgets within the util package. See screenshots <a href="util_screenshots.html">here</a>.
 		</p>
 			<p>
 		The utilities include:

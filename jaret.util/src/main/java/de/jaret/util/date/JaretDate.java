@@ -388,7 +388,7 @@ public class JaretDate extends PropertyObservableBase implements Comparable<Jare
      * @return the encapsulated java.util.Date
      */
     public Date getDate() {
-        return _date;
+        return _date == null ? null : new Date(_date.getTime());
     }
 
     /**
@@ -590,7 +590,7 @@ public class JaretDate extends PropertyObservableBase implements Comparable<Jare
      * {@inheritDoc} Two JaretDates are equal if the encapsulated Date is equal.
      */
     public boolean equals(Object o) {
-        return _date.equals(((JaretDate) o).getDate());
+        return o == this || (o instanceof JaretDate && (_date != null && _date.equals(((JaretDate) o).getDate())));
     }
 
     /**
